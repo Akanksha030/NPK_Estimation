@@ -177,10 +177,10 @@ for nutrient, values in nutrient_ratios.items():
 # Display ideal nutrient ratios in a creative box at top right
 st.markdown(
     f'<div style="position:absolute; top:5%; right:5%; background-color:#f1f1f1; padding: 10px; border-radius: 10px; text-align: center;">'
-    f'<h4 style="margin-bottom:5px;">Ideal Nutrient Ratios for {selected_crop}</h4>'
-    f'<p style="margin: 0; color:#006100;">N: {ideal_values_crop["N"]}</p>'
-    f'<p style="margin: 0; color:#3c78d8;">P: {ideal_values_crop["P"]}</p>'
-    f'<p style="margin: 0; color:#953735;">K: {ideal_values_crop["K"]}</p>'
+    f'<h4 style="margin-bottom:5px; color:#000000">Ideal Nutrient Ratios for {selected_crop}</h4>'
+    f'<p style="margin: 0; color:#FF5733;">N: {ideal_values_crop["N"]}</p>'
+    f'<p style="margin: 0; color:#33FF57;">P: {ideal_values_crop["P"]}</p>'
+    f'<p style="margin: 0; color:#5733FF;">K: {ideal_values_crop["K"]}</p>'
     f'</div>',
     unsafe_allow_html=True
 )
