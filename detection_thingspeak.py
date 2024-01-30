@@ -120,14 +120,16 @@ st.write(f'Predicted N: {predicted_valuesN[0]}')
 st.write(f'Predicted P: {predicted_valuesP[0]}')
 st.write(f'Predicted K: {predicted_valuesK[0]}')
 
-# Create a DataFrame for horizontal bar chart
 df_chart = pd.DataFrame({
     'Nutrient': ['N', 'P', 'K'],
     'Predicted Value': [predicted_valuesN[0], predicted_valuesP[0], predicted_valuesK[0]]
 })
 
+# Specify custom colors for the bar graph
+bar_colors = ['#FF5733', '#33FF57', '#5733FF']
+
 fig, ax = plt.subplots(figsize=(8, 3))
-sns.barplot(x='Predicted Value', y='Nutrient', data=df_chart, ax=ax)
+sns.barplot(x='Predicted Value', y='Nutrient', data=df_chart, ax=ax, palette=bar_colors)
 ax.set_xlabel('Predicted Value')
 ax.set_ylabel('Nutrient')
 ax.tick_params(axis='both', labelsize=10)  # Adjust text size
