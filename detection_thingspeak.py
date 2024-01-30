@@ -136,7 +136,6 @@ ax.tick_params(axis='both', labelsize=10)  # Adjust text size
 for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
              ax.get_xticklabels() + ax.get_yticklabels()):
     item.set_fontsize(12)  # Adjust text size
-    item.set_family('Arial')
 
 # Adjust chart lines thickness
 for axis in ['top', 'bottom', 'left', 'right']:
