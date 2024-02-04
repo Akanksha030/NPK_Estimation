@@ -103,8 +103,11 @@ if prediction_source == "ThingSpeak Data":
         st.warning("ThingSpeak data incomplete. Using default inputs.")
         new_data=np.array([[25,80,7,200]])
         predicted_valuesN = loaded_modelN.predict(new_data)
+        print("predicted_valuesN")
         predicted_valuesP = loaded_modelP.predict(new_data)
+        print("predicted_valuesP")
         predicted_valuesK = loaded_modelK.predict(new_data)
+        print("predicted_valuesK")
     else:
         predicted_valuesN = loaded_modelN.predict(new_data)
         predicted_valuesP = loaded_modelP.predict(new_data)
