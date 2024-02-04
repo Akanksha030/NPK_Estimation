@@ -135,7 +135,9 @@ predicted_values = {
 
 # Make a POST request to the server
 server_url = "https://blushing-sun-hat-lion.cyclic.app/products"
-response = requests.post(server_url, json=predicted_values)
+response = requests.post(server_url, json={'Nitrogen': 49.86,
+'Pottasium':51.95,
+'Phosphorus': 34.28})
 
 # Check the response status
 if response.status_code == 200:
