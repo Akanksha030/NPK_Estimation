@@ -171,7 +171,25 @@ nutrient_ratios = nutrient_status(predicted_ratio, ideal_ratio)
 st.write('**Nutrient Status:**')
 for nutrient, values in nutrient_ratios.items():
     st.write(f'{nutrient}: {values["Status"]} (Ratio: {values["Ratio"]})')
+##########################################
+# Displaying data on server
 
+predicted_values = {
+    "Nitrogen": predicted_valuesN[0],
+    "Phosphorous": predicted_valuesP[0],
+    "Potassium": predicted_valuesK[0],
+}
+
+# Make a POST request to the server
+server_url = "https://blushing-sun-hat-lion.cyclic.app/products"
+response = requests.post(server_url, json=predicted_values)
+
+# Check the response status
+if response.status_code == 200:
+    st.success("Predicted nutrient values successfully sent to the server.")
+else:
+    st.error(f"Failed to send predicted nutrient values. Status code: {response.status_code}")
+#################################################
 
 
 # Display ideal nutrient ratios in a creative box at top right
