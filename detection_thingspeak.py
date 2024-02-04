@@ -186,8 +186,11 @@ response = requests.post(server_url, json=predicted_values)
 
 # Check the response status
 if response.status_code == 200:
+    print("Before POST request")
     st.success("Predicted nutrient values successfully sent to the server.")
+    print("Success")
 else:
+    print("Failed")
     st.error(f"Failed to send predicted nutrient values. Status code: {response.status_code}")
 #################################################
 
